@@ -5,7 +5,8 @@ $(document).ready(() => {
 //    Typed js integration
 var typed = new Typed("#typed" , {
     strings: ["A Front-end Web Developer", "A Graphic Designer", "An UI/UX Designer"],
-    backSpeed: 20,
+    backSpeed: 30,
+    backDelay: 1300,
     typeSpeed: 30,
     loop: true,
 });
@@ -31,6 +32,22 @@ window.onscroll = () => {
         };
     }
 };
+
+// Nav hide after click
+let navBar = document.querySelectorAll('.nav-link');
+let navCollapse = document.querySelector('.navbar-collapse.collapse');
+navBar.forEach(function(a){
+    a.addEventListener("click", function(){
+        navCollapse.classList.remove("show");
+    })
+})
+
+//Portfolio buttons 
+if( $(window).width() < 1000 ) {
+    $(".port-btns").removeClass("hidden");
+};
+
+
     
 
 
