@@ -1,10 +1,15 @@
-$(document).ready(() => {
+// Loader
+setTimeout(loader , 1200);
+    function loader() {
+        $(".loader").fadeOut("slow");
+    }
 
+$(document).ready(() => {
 
 
 //    Typed js integration
 var typed = new Typed("#typed" , {
-    strings: ["A Front-end Web Developer", "A Graphic Designer", "An UI/UX Designer"],
+    strings: ["","A Front-end Web Developer", "A Graphic Designer", "An UI/UX Designer"],
     backSpeed: 30,
     backDelay: 1300,
     typeSpeed: 30,
